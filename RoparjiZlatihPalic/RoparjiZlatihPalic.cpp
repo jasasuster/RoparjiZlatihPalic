@@ -11,7 +11,7 @@ int getNumberOfRobbers(int G) {
         allRobersTookBars = true;
         for (int j = 0; j < N; j++) {
             // robbers can only take golden bars if remainder of remainingGoldBars and N is 1
-            if (remainingGoldBars % N == 1) {   
+            if (remainingGoldBars % N == 1) {
                 remainingGoldBars -= remainingGoldBars / N + 1;
             }
             else {
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
     std::ifstream infile(argv[1]);
     std::ofstream outfile("output.txt");
 
-    int G, N;  // number of gold bars
+    int G;
 
     if (infile.is_open()) {   // checking whether the file is open
         while (infile >> G) {   // read line by line
